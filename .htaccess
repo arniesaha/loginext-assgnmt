@@ -1,0 +1,30 @@
+RewriteBase /
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteEngine on
+RewriteCond %{REQUEST_URI} /pagename.php$
+RewriteRule .* /otherpage.html [L]
+RewriteRule  ^thank-you/?$  index.php?route=checkout/success  [L]     #Success
+RewriteRule  ^offers/?$  index.php?route=information/information&information_id=11  [L]     #Offers
+RewriteRule  ^group-orders/?$  index.php?route=information/grouporder  [L]     #Group Orders
+RewriteRule  ^contact-us/?$  index.php?route=information/contact  [L]     #Contact Us
+RewriteRule  ^locations/?$  index.php?route=manufacturer/station  [L]     #Locations
+RewriteRule  ^partners/?$  index.php?route=information/information&information_id=14  [L]     #Partners
+RewriteRule  ^packaging-policy/?$  index.php?route=information/information&information_id=9  [L]     #Packaging-Policy 
+RewriteRule  ^guarantee/?$  index.php?route=information/information&information_id=8  [L]     #Guarantee
+RewriteRule  ^terms-conditions/?$  index.php?route=information/information&information_id=5  [L]     #T&C
+RewriteRule  ^owners/?$  index.php?route=information/restowner  [L]     #Owners
+RewriteRule  ^about-us/?$  index.php?route=information/information&information_id=4  [L]     #About-Us
+RewriteRule  ^meet-the-team/?$  index.php?route=information/information&information_id=7  [L]     #Meet-The-Team
+RewriteRule  ^faq/?$  index.php?route=information/information&information_id=12  [L]     #FAQ
+RewriteRule  ^pnrstatus/?$  index.php?route=common/home/status  [L]     #PNR-Status
+RewriteRule  ^pnr-status-internal/?$  index.php?route=common/home/statusinternal  [L]     #PNR-Status-Internal
+RewriteRule  ^home/?$  index.php?route=common/home [L]     #Home
+RewriteCond %{HTTP_HOST} ^railtiffin.com/r
+RewriteRule ^(.*) https://apps.phonethics.in/email-invite/select-mail.html [P]
+RewriteCond %{HTTP_HOST} ^r\.railtiffin\.com$ [OR] 
+RewriteCond %{HTTP_HOST} ^www\.r\.railtiffin\.com$ 
+RewriteRule ^/?$ "http\:\/\/example\.com\/\?pbcezmobsite\=cafe\-sample1\-caevv" [P] 
+
+
