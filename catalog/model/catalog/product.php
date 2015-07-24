@@ -19,7 +19,7 @@ class ModelCatalogProduct extends Model {
   	public function getPinData() {
 
   		 	//$pindata = $this->db->query("SELECT * FROM loginext WHERE pincode BETWEEN 1 AND 10");
-  			$pindata = $this->db->query("SELECT * FROM `loginext` ORDER BY rating DESC");
+  			$pindata = $this->db->query("SELECT * FROM `loginext` ORDER BY rating ASC");
   		 	
   		 	
   		 	return $pindata->rows;
